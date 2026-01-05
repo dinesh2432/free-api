@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express()
-
+const cors = require("cors")
 app.use(express.json())
 const data = {
   "status": "success",
@@ -92,7 +92,7 @@ const data = {
     }
   }
 }
-app.cors("*");
+app.use(cors())
 app.get("/", (req, res)=>{
     res.json(data);
 })
