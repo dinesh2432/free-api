@@ -92,6 +92,7 @@ const data = {
     }
   }
 }
+app.cors("*");
 app.get("/", (req, res)=>{
     res.json(data);
 })
